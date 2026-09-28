@@ -1,6 +1,6 @@
-# ArthSetu
+# YojanaMitra
 
-ArthSetu is an SIH 2026 MVP for transparent government-scheme matching, indicative finance estimates, and demonstration partner routing.
+YojanaMitra is an SIH 2026 MVP for transparent government-scheme matching, indicative finance estimates, and demonstration partner routing.
 
 ## Architecture
 
@@ -16,7 +16,7 @@ ArthSetu is an SIH 2026 MVP for transparent government-scheme matching, indicati
 
 ## Run locally
 
-From `D:\Arth-Setu SIH`:
+From `D:\YojanaMitra SIH`:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -27,7 +27,7 @@ python -m uvicorn app.main:app --app-dir backend --reload --port 8000
 In a second PowerShell window:
 
 ```powershell
-cd "D:\Arth-Setu SIH\frontend"
+cd "D:\YojanaMitra SIH\frontend"
 npm install
 npm run dev
 ```
@@ -42,7 +42,7 @@ Copy `.env.example` to `.env` and set `GEMINI_API_KEY`. ArthSetu uses `gemini-2.
 
 The partner locator requests driving geometry, distance, and duration from the public OSRM routing service when a partner is selected. If routing is unavailable, the map still shows the partner and labels the straight-line distance fallback; ETA is not estimated. Routes do not include live traffic. No routing API key or new package is required.
 
-The SQLite file (`backend/arthsetu.db`) is created and seeded on API startup with the requested tables: `users`, `schemes`, `partners`, `eligibility_rules`, and `demo_profiles`. There are three MVP schemes, 24 clearly-labelled `DEMO DATA` partners, and six demo scenarios:
+The SQLite file (`backend/yojanamitra.db`) is created and seeded on API startup with the requested tables: `users`, `schemes`, `partners`, `eligibility_rules`, and `demo_profiles`. There are three MVP schemes, 24 clearly-labelled `DEMO DATA` partners, and six demo scenarios:
 
 1. Micro Finance Match
 2. Term Loan Match
